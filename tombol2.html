@@ -1,0 +1,629 @@
+<div class="kt-container  kt-grid__item kt-grid__item--fluid">
+            <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                            MODAL BOX
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td style="width: 10%">TOMBOL2</td>
+                                <td>
+                                    <button type="button" class="btn btn-bold btn-label-brand btn-sm" data-toggle="modal" data-target="#kt_modal_4">Input Piket</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pendidikankejuruan">
+                                        PENDIDIKAN KEJURUAN</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nonformal">
+                                        PENDIDIKAN Non Formal</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pangkat">
+                                        Riwayat Kepangkatan</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gaji">
+                                        Riwayat Gaji</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jabatan">
+                                        Riwayat Jabatan</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#keluarga">
+                                        Riwayat Data Keluarga</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#jasa">
+                                            tanda jasa</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bhs">
+                                            kecakapan bahasa</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#or">
+                                            kecakapan olahraga</button>
+                                </td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#brevet">
+                                            Kecakapan Brevet</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Modal kejuruan-->
+                    <div class="modal fade" id="pendidikankejuruan" tabindex="-1" role="dialog" aria-labelledby="pendidikankejuruan" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="jdlpendidikankejuruan">TAMBAH PENDIDIKAN KEJURUAN</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="nip" class="form-control-label">NIP / NRP</label>
+                                            <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai">
+                                                    <option value="">select pegawai</option>
+                                                    <!-- @foreach ($datas as $data) -->
+                                                    <option value=""></option>
+                                                    <!-- @endforeach -->
+                                            </select>
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>alert</strong></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Nama Pendidikan</label>
+                                            <input class="form-control" id="message-text" name="nama_pendidikan" type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Kota</label>
+                                            <input class="form-control" id="message-text" name="kota" type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Tahun Lulus</label>
+                                            <input type="date" class="form-control" name="tahun_lulus"id="message-text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Lama Studi </label>
+                                            <input class="form-control" id="message-text" name="lama_bulan"type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Ranking</label>
+                                            <input class="form-control" id="message-text" name="ranking"type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Lulus / Tidak</label>
+                                            <select class="form-control kt-select2" id="kt_select2_1" name="is_lulus_tidak">
+                                                    <option value="">select lulus</option>
+                                                    <!-- @foreach ($datas as $data) -->
+                                                    <option value=""></option>
+                                                    <!-- @endforeach -->
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Keterangan</label>
+                                            <input class="form-control" id="message-text" name="keterangan" type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">file </label>
+                                            <input class="form-control" id="message-text" type="file" name="file"></input>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Selesai -->
+            </div>
+                    <!-- Modal nonformal -->
+                    <div class="modal fade" id="nonformal" tabindex="-1" role="dialog" aria-labelledby="jdlnonformal" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="jdlnonformal">TAMBAH PENDIDIKAN NON FORMAL</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="nip" class="form-control-label">NIP / NRP</label>
+                                            <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                    <option value="">select Pegawai</option>
+                                                    <!-- @foreach ($datas as $data) -->
+                                                    <option value=""></option>
+                                                    <!-- @endforeach -->
+                                            </select>
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>alert</strong></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Nama Pendidikan</label>
+                                            <input class="form-control" id="message-text" name="nama_pendidikan" type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Lama Pendidikan</label>
+                                            <input class="form-control" id="message-text" name="lama_pendidikan"type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Tahun Pendidikan</label>
+                                            <input type="text" class="form-control" name="tahun_pendidikan"id="message-text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Tempat Pendidikan</label>
+                                            <input type="text" class="form-control" name="tempat_pendidikan"id="message-text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">Keterangan</label>
+                                            <input class="form-control" id="message-text" name="keterangan" type="text"></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="form-control-label">file </label>
+                                            <input class="form-control" id="message-text" type="file" name="file"></input>
+                                        </div>
+                                    </form>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Selesai -->
+
+                    <!-- modal pangkat -->
+                    <div class="modal fade" id="pangkat" tabindex="-1" role="dialog" aria-labelledby="jdlpangkat" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdlpangkat">TAMBAH RiWAYAT Kepangkatan</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Pangkat</label>
+                                                <input class="form-control" id="message-text" name="id_pangkat" type="text"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Time</label>
+                                                <input class="form-control" id="message-text" name="tmt"type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Nomor SK</label>
+                                                <input type="text" class="form-control" name="nomer_sk"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Pejabat</label>
+                                                <input type="text" class="form-control" name="pejabat"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Tanggal SK</label>
+                                                <input class="form-control" id="message-text" name="tanggal_sk" type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Dasar Peraturan </label>
+                                                <input class="form-control" id="message-text" type="text" name="dasar_peraturan"></input>
+                                            </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- Selesai -->
+
+                    <!-- modal gaji berkala -->
+                    <div class="modal fade" id="gaji" tabindex="-1" role="dialog" aria-labelledby="jdlgaji" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdlgaji">TAMBAH RIWAYAT GAJI</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Gaji</label>
+                                                <input class="form-control" id="message-text" name="gaji" type="text"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Time</label>
+                                                <input class="form-control" id="message-text" name="tmt"type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Nomor SK</label>
+                                                <input type="text" class="form-control" name="nomer_sk"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Pejabat</label>
+                                                <input type="text" class="form-control" name="pejabat"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Tanggal SK</label>
+                                                <input class="form-control" id="message-text" name="tanggal_sk" type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Dasar Peraturan </label>
+                                                <input class="form-control" id="message-text" type="text" name="dasar_peraturan"></input>
+                                            </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- selesai -->
+
+                    <!-- modal jabatan -->
+                    <div class="modal fade" id="jabatan" tabindex="-1" role="dialog" aria-labelledby="jdljabatan" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdljabatan">TAMBAH RIWAYAT Jabatan</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Jabatan</label>
+                                                <input class="form-control" id="message-text" name="id_jabatan" type="text"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Nomor SK</label>
+                                                <input type="text" class="form-control" name="nomer_sk"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Pejabat</label>
+                                                <input type="text" class="form-control" name="pejabat"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Tanggal SK</label>
+                                                <input class="form-control" id="message-text" name="tgl_sk" type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Tanggal Mulai Terhitung</label>
+                                                <input class="form-control" id="message-text" name="tgl_mulai_terhitung" type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Keterangan </label>
+                                                <input class="form-control" id="message-text" type="text" name="keterangan"></input>
+                                            </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <!-- selesai -->
+                    </div>
+                    <!-- selesai -->
+
+                    <!-- modal data keluarga -->
+                    <div class="modal fade" id="keluarga" tabindex="-1" role="dialog" aria-labelledby="jdlkeluarga" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdlkeluargan">TAMBAH RIWAYAT KELUARGA</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Nama</label>
+                                                <input class="form-control" id="message-text" name="nama" type="text"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Jenis Kelamin</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="jk">
+                                                        <option value="">select jenis kelamin</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value="laki-laki">laki-laki</option>
+                                                        <option value="perempuan">perempuan</option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Hubungan Keluarga</label>
+                                                <input type="text" class="form-control" name="hubungan_keluarga"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Tempat Lahir</label>
+                                                <input type="text" class="form-control" name="tempat_lahir"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Tanggal Lahir</label>
+                                                <input class="form-control" id="message-text" name="tgl_lahir" type="date"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Status Hidup</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="status_hidup">
+                                                        <option value="">select status</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value="Hidup">Hidup</option>
+                                                        <option value="Meninggal">Meninggal</option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Pekerjaan </label>
+                                                <input class="form-control" id="message-text" type="text" name="pekerjaan"></input>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="message-text" class="form-control-label">Keterangan </label>
+                                                <input class="form-control" id="message-text" type="text" name="keterangan"></input>
+                                            </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <!-- selesai -->
+                    </div>
+                    <!-- selesai -->
+
+                    <!-- modal tanda jasa -->
+                    <div class="modal fade" id="jasa" tabindex="-1" role="dialog" aria-labelledby="jdljasa" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdljasa">TANDA JASA DAN PRESTASI</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Nama Prestasi</label>
+                                                    <input type="text" class="form-control" name="nama_prestasi"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Tahun</label>
+                                                    <input type="text" class="form-control" name="tahun"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Keterangan</label>
+                                                    <input class="form-control" id="message-text" name="keterangan" type="text"></input>
+                                                </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- selesai -->
+
+                    <!-- modal bahasa -->
+                    <div class="modal fade" id="bhs" tabindex="-1" role="dialog" aria-labelledby="jdlbhs" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdlbhs">KECAKAPAN BAHASA</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Jenis Bahasa</label>
+                                                    <input type="text" class="form-control" name="jenis_prestasi"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Nama Bahasa</label>
+                                                    <input type="text" class="form-control" name="nama_bahasa"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Kemampuan Bahasa</label>
+                                                    <input type="text" class="form-control" name="kemampuan_bahasa"id="message-text">
+                                            </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- selesai -->
+
+                    <!-- modal olahraga -->
+                    <div class="modal fade" id="or" tabindex="-1" role="dialog" aria-labelledby="jdlor" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdlor">KECAKAPAN OLAHRAGA DAN BELADIRI</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Nama Olahraga</label>
+                                                    <input type="text" class="form-control" name="nama_olahraga"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Keterangan</label>
+                                                    <input class="form-control" id="message-text" name="keterangan" type="text"></input>
+                                                </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- selesai -->
+
+                    <!-- modal brevet -->
+                    <div class="modal fade" id="brevet" tabindex="-1" role="dialog" aria-labelledby="jdlbrevet" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="jdlbrevet">KECAKAPAN BREVET</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nip" class="form-control-label">NIP / NRP</label>
+                                                <select class="form-control kt-select2" id="kt_select2_1" name="nip_nrp_pegawai1">
+                                                        <option value="">select Pegawai</option>
+                                                        <!-- @foreach ($datas as $data) -->
+                                                        <option value=""></option>
+                                                        <!-- @endforeach -->
+                                                </select>
+                                                <span class="invalid-feedback" role="alert">
+                                                        <strong>alert</strong></span>
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Nama Brevet</label>
+                                                    <input type="text" class="form-control" name="nama_brevet"id="message-text">
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Asal Perolehan</label>
+                                                    <input class="form-control" id="message-text" name="asal_perolehan" type="text"></input>
+                                                </div>
+                                        </form>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- selesai -->
+</div>  
